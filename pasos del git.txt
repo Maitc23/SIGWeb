@@ -1,0 +1,42 @@
+//PASOS PARA EL GIT
+
+1. TENER CUENTA DE GITHUB
+2. DESCARGAR PROGRAMA GITBASH
+3. CLONAR LOS REPOSITORIOS 
+	//Para el repositorio de la parte Web
+		3.1. Creen  una carpeta en la cual vayan a meter el repositorio
+		3.2. En esta carpeta hacen click derecho y buscan la opcion de "Gitbash here"
+		3.3. En el gitbash escriben "git init" y le dan enter
+		3.4. Escribir "git clone https://github.com/Maitc23/SIGWeb.git"
+		3.5. Dentro de la carpeta que les saldra abrir nuevamente el git bash alli y escribir git remote -v (sirve para verificacion de version)
+		3.6. Escribir git remote add upstream https://github.com/Maitc23/SIGWeb.git
+		3.7. Verificar nuevamente la version con el git remote -v 
+		3.8. Escribir git pull -r upstream master (esto es para bajar la ultima version del codigo de la rama master)
+		
+
+	//Para el repositorio de la parte Android
+		3.5. Crear carpeta
+		3.6. Abrir el gitbash en esa carpeta (ver paso 3.2.)
+		3.7. Escribir git init
+		3.8. Escribir git clone https://github.com/Maitc23/SIGAndroid.git
+		3.9. Dentro de la carpeta que les saldra abrir nuevamente el git bash alli y escribir git remote -v (sirve para verificacion de version)
+		3.6. Escribir git remote add upstream https://github.com/Maitc23/SIGAndroid.git
+		3.7. Verificar nuevamente la version con el git remote -v 
+		3.8. Escribir git pull -r upstream master (esto es para bajar la ultima version del codigo de la rama master)
+		
+
+4. PARA SUBIR CONTENIDO EN LOS REPOSITORIOS
+	
+	4.1. Dar cuenta de github a Maycol Cuervo para que los incluya en los repositorios
+	4.2. SIEMPRE QUE SE VAYA A EMPEZAR A TRABAJAR HACER 
+		4.2.1 git pull
+			4.2.1.1 Si les pide usuario y contraseña usar el usario y contraseña con el que se registraron al github
+				4.2.1.1.1 Si les sale error hablar con Maycol Cuervo
+	4.3. PARA ENVIAR CONTENIDO:
+		4.3.1 Si agregaron un nuevo archivo escribir git add --all
+		4.3.2.Hacer commit y ponerle un mensaje descriptivo de lo que hicieron 
+		(si usan visual studio code solo es hacer click en el chequesito que tiene en el control de versiones), 
+		si no poner git commit -m "MENSAJE EXPLICITO"
+		4.3.3 Escribir git push origin master (si se esta usando otra rama reemplazar el master y colocar el nombre de la rama)
+		
+		
