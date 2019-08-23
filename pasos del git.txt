@@ -38,5 +38,7 @@
 		(si usan visual studio code solo es hacer click en el chequesito que tiene en el control de versiones), 
 		si no poner git commit -m "MENSAJE EXPLICITO"
 		4.3.3 Escribir git push origin master (si se esta usando otra rama reemplazar el master y colocar el nombre de la rama)
+			4.3.1 Poner su usario y contraseña con el que se registraron
+
 		
 		
