@@ -1,0 +1,31 @@
+{
+  "name": "SIGWeb",
+  "version": "1.0.0",
+  "description": "Repositorio para el proyecto de SIG en la parte web",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maitc23/SIGWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maitc23/SIGWeb/issues"
+  },
+  "homepage": "https://github.com/Maitc23/SIGWeb#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-myconnection": "^1.0.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1"
+  }
+}
