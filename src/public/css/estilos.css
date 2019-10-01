@@ -1,0 +1,17 @@
+.boton{
+    width: 150px;
+    background-color: #15232C;
+    color: white;
+    border-width: 2px;
+    border-color: #15232C;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: #15232C;
+}
+
+.boton.disabledd{
+    background-color: transparent;
+    color:#15232C;
+}
