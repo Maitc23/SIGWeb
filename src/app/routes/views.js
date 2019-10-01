@@ -25,6 +25,22 @@ router.get('/login.ejs', function (req, res) {
       });
 });
 
+
+router.get('/header.ejs', function (req, res) {
+  res.render('header',
+    {
+      message: req.flash('loginMessage')
+    });
+});
+
+
+router.get('/header.ejs', function (req, res) {
+  res.render('header',
+    {
+      message: req.flash('loginMessage')
+    });
+});
+
 /**
  * --Temporaly public view
  */
