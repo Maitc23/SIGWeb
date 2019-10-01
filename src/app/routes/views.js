@@ -7,6 +7,8 @@ const router = require('express').Router();
 
 /**
  * --- Public Views ---
+ *      solo usado para pruebas para evitrar el continuo acceso 
+ *      BORRALO SUBRNOMAL
  */
 
 router.get('/', function (req, res) {
@@ -22,8 +24,15 @@ router.get('/login.ejs', function (req, res) {
         message: req.flash('loginMessage')
       });
 });
-  
 
+/**
+ * --Temporaly public view
+ */
+router.get('/inventory.ejs', function (req, res) {
+  res.render('inventory', {
+    //message: req.flash('loginMessage')
+  });
+});
 
 
 /**
