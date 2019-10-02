@@ -9,9 +9,11 @@
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link href="/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="/css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bootstrap/bootnavbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+            <!--
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="#"><img src="imagenes/logo (1).png" width="50%"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +23,17 @@
                       <ul class="navbar-nav  ml-lg-auto">
                         <li class="nav-item active dropdown">
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#"><strong>Insumos <span class="sr-only">(current)</span></a></strong>
-                          <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Nuevo insumo</a>
-                              <a class="dropdown-item" href="#">Insumo existente</a>
-                          </div>
+                          <ul class="dropdown-menu">
+                            <li><a>Nuevo insumo</a></li>
+                            <li><a>Insumo existente</a></li>
+                            <li class ="dropdown dropdown-submenu ><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Nuevo insumo</a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Unidad</a></li> 
+                                <li><a href="#">Sub categoria</a></li> 
+                                <li><a href="#">Medida</a></li> 
+                              </ul>
+                            </li>
+                          </ul>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="#"><strong>Piezas</a></strong>
@@ -48,3 +57,70 @@
                       </ul>
                     </div>
             </nav>
+          -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+              <a class="navbar-brand" href="#"><img src="imagenes/logo (1).png" width="50%"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-lg-auto">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                            <strong>Insumos</strong>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li class="nav-item dropdown">
+                                  <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                                      aria-haspopup="true" aria-expanded="false">
+                                      Nuevo insumo
+                                  </a>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                      <li><a class="dropdown-item" href="#">Unidad </a></li>
+                                      <li><a class="dropdown-item" href="#">Subcategoria</a></li>
+                                      <li></li><a class="dropdown-item" href="#">Medidas</a></li>                       
+                                  </ul>
+                                </li>
+                          <div class="dropdown-divider"></div>
+                          <li><a class="dropdown-item" href="#">Insumo existente</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <strong>Piezas</strong>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Nueva pieza</a></li>
+                              <li><a class="dropdown-item" href="#">Pieza existente</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <strong>Inventario</strong>
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Insumos</a></li>
+                              <li><a class="dropdown-item" href="#">Piezas</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#"><strong>Ventas</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#" ><strong>Reportes</strong></a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link"  href="#" ><strong>Cerrar Sesión</strong></a>
+                      </li>
+                      <li class="nav-item mt-2">
+                        <i class='fa fa-user' style='font-size:25px;color: #d8a10a'></i>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
