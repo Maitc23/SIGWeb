@@ -14,8 +14,8 @@ $(document).ready(function (){
                 type: 'post',
                 url: '/inventory',
                 headers: {
-                    'Authorization': 'bearer' +window.localStorage.getItem('token');
-                }
+                    'Authorization': 'bearer' +window.localStorage.getItem('token')
+                },
                 contentType: 'application/json; charset=utf-8',
                 data: JSON.stringify({
                     nombre: $('#nombre').val(),
