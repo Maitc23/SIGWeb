@@ -4,7 +4,7 @@
 *  
 *credenciales de la base de datos oficial
 *quitar de comentarios para hacerlo funcionar
-*/
+**/
 function mysqlConnection(){
     let mysql = require('mysql'); 
 

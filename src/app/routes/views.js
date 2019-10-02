@@ -4,13 +4,6 @@
  */
 const router = require('express').Router();
 
-
-/**
- * --- Public Views ---
- *      solo usado para pruebas para evitrar el continuo acceso 
- *      BORRALO SUBRNOMAL
- */
-
 router.get('/', function (req, res) {
     res.render('index', {
       message: req.flash('loginMessage')
