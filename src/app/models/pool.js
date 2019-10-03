@@ -1,5 +1,10 @@
 "use strict"; 
 
+/**
+*  
+*credenciales de la base de datos oficial
+*quitar de comentarios para hacerlo funcionar
+**/
 function mysqlConnection(){
     let mysql = require('mysql'); 
 
@@ -13,4 +18,22 @@ function mysqlConnection(){
     return connection;
 }
 
+
+/**
+ * Credenciales locales para pruebas base de funcionalidad
+ * Borrar al terminar o cambiar acceso
+ *
+function mysqlConnection(){
+    let mysql = require('mysql'); 
+
+    const connection = mysql.createConnection({
+        user: 'root',
+        password: '', 
+        host: 'localhost', 
+        port: '3306', 
+        database: 'proyecto_sig' 
+    }); 
+    return connection;
+}
+*/
 module.exports = mysqlConnection;
