@@ -4,6 +4,7 @@
  */
 const router = require('express').Router();
 
+<<<<<<< HEAD
 
 /**
  * --- Public Views ---
@@ -12,6 +13,9 @@ const router = require('express').Router();
  */
 
 router.get('/index.ejs', function(req, res) {
+=======
+router.get('/', function (req, res) {
+>>>>>>> origin/Frank_dev
     res.render('index', {
         message: req.flash('loginMessage')
     });
@@ -24,6 +28,7 @@ router.get('/login.ejs', function(req, res) {
     });
 });
 
+<<<<<<< HEAD
 
 router.get('/header.ejs', function(req, res) {
     res.render('header', {
@@ -38,6 +43,8 @@ router.get('/header.ejs', function(req, res) {
     });
 });
 
+=======
+>>>>>>> origin/Frank_dev
 /**
  * --Temporaly public view
  */
@@ -61,6 +68,7 @@ router.get('/perfil.ejs', function(req, res) {
 router.get('/logout', function(req, res) {
     req.logout();
     req.redirect();
+<<<<<<< HEAD
 });
 module.exports = router;
 
@@ -76,3 +84,21 @@ router.get('/construccion.ejs', function(req, res) {
         /* message: req.flash('loginMessage')*/
     });
 });
+=======
+  });
+
+
+router.get('/landing.ejs', function(req, res) {
+  res.render('landing', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
+
+router.get('/construccion.ejs', function(req, res) {
+  res.render('construccion', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
+
+module.exports = router;
+>>>>>>> origin/Frank_dev

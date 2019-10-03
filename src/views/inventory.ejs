@@ -1,4 +1,5 @@
 <% include partial/header.ejs %>
+<<<<<<< HEAD
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -8,59 +9,50 @@
                 <h1 style="color: #d8a10a">INSUMOS</h1>
                 <h5 style="color: #93949B"><em>Nuevo producto</em></h5>
                 <form action="" method="POST" class="mt-5">
+=======
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="imagenes/sombrero.PNG" class="img-fluid mt-5">
+        </div>
+        <div class="col-md-7 form-group mt-5">
+            <h1 style="color: #d8a10a">INSUMOS</h1>
+            <h5 style="color: #93949B"><em>Nuevo producto</em></h5>
+            <form action="" method="POST" class="mt-5">
+>>>>>>> origin/Frank_dev
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Categoria:</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="" name="" type="text" placeholder="categoria" required>
+                            <select class="form-control" id="categoria">
+                                <option value="Null">------------------</option>
+                                <option value="">opcion 1</option>
+                                <option value="">opcion 2</option>
+                                <option value="">opcion 3</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Nombre:</label>
                         <div class="col-sm-10">
-                            <input class="form-control" id="" name="" type="text" placeholder="nombre del insumo"required>
+                            <input class="form-control" id="nombre" name="" type="text" placeholder="nombre del insumo"required>
                         </div>
                     </div>
                     <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Sub-Categoria:</label>
                             <div class="col-sm-10">
-                                <input class="form-control" id="" name="" type="text" placeholder="Sub-Categoria">
+                                <input class="form-control" id="subCategoria" name="" type="text" placeholder="Sub-Categoria">
                             </div>
                         </div>
-                    <fieldset class="form-group">
-                        <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                        <div class="col-sm-10">
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                First radio
-                            </label>
-                            </div>
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                                Second radio
-                            </label>
-                            </div>
-                            <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                            <label class="form-check-label" for="gridRadios3">
-                                Third disabled radio
-                            </label>
-                            </div>
-                        </div>
-                        </div>
-                    </fieldset>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Precio:</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="" id="" placeholder="precio 1.50$" required>
+                            <input class="form-control" type="text" name="" id="precio" placeholder="precio 1.50$" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Cantidad:</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="" id="" placeholder="cantidad 15 und." required>   
+                            <input class="form-control" type="text" name="" id="cantidad" placeholder="cantidad 15 und." required>   
                         </div>
                     </div>
                     <div class="form-group row">
@@ -74,12 +66,19 @@
     </div>
 
     <!--================Scripts============================= -->
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/parallax.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/perfilx.js"></script>
+    <script  type="text/javascript" src="js/inventory.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootnavbar.js" ></script>
+    <script>
+        $(function () {
+            $('#main_navbar').bootnavbar();
+        })
+    </script>
+
+    
 </body>
 </html>
