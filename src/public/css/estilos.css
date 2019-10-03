@@ -16,4 +16,16 @@
     color:#15232C;
 }
 
+.contenido
+{
+    display: flex;
+    vertical-align: middle;
+}
 
+.boton1{
+    width: 180px;
+    height: 50px;
+    background-color: transparent;
+    border-width: 2px;
+    border-color: rgba(255, 197, 7, 0.63);
+}
