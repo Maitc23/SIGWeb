@@ -6,6 +6,6 @@ const inventoryRoutes = require('./inventory');
 router.use('/auth', authRoutes);
 router.use('/', viewsRouter);
 router.use(require('../middlewares/sessionVerification'));
-router.use('/inventory',inventoryRoutes);
+router.use('/',inventoryRoutes);
 
 module.exports = router; 
