@@ -1,11 +1,13 @@
 <% include partial/header.ejs %>
-
-    <h1>Inventario aqui</h1>
-    <h1>Insumos</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 form-group">
-                <form id="registerInventory" method="post" action="#" >
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="imagenes/sombrero.PNG" class="img-fluid mt-5">
+        </div>
+        <div class="col-md-7 form-group mt-5">
+            <h1 style="color: #d8a10a">INSUMOS</h1>
+            <h5 style="color: #93949B"><em>Nuevo producto</em></h5>
+            <form action="" method="POST" class="mt-5">
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Categoria:</label>
                         <div class="col-sm-10">
@@ -42,8 +44,8 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-12">
-                            <input type="submit" class="btn btn btn btn-outline-success btn-lg btn-block ">
+                        <div class="col-sm-12 text-center">
+                        <button type="submit" class="btn boton">Guardar</button>
                         </div>
                     </div>
                  </form>
