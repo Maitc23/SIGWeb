@@ -42,4 +42,18 @@ router.get('/logout', function (req, res) {
     req.logout();
     req.redirect();
   });
+
+
+router.get('/landing.ejs', function(req, res) {
+  res.render('landing', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
+
+router.get('/construccion.ejs', function(req, res) {
+  res.render('construccion', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
+
 module.exports = router;
