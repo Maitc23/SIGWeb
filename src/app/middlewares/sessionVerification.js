@@ -17,7 +17,7 @@ module.exports = (req, res, next) => {
         getUserById(tokenData.payload.id, tokenString)
           .then(userData => {
             req.sessionPayload = {
-              data: userData,
+              data: userData
               };
             next();
           })

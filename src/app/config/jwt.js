@@ -6,7 +6,7 @@ module.exports = {
     issuer:  'br3sscnfibc3ctd9uesh',
     subject:  'br3sscnfibc3ctd9uesh',
     audience:  'br3sscnfibc3ctd9uesh',
-    expiresIn:  "12h",
+    expiresIn:  "1h",
     algorithm:  "RS256"
   };
   

@@ -18,15 +18,6 @@ router.get('/login.ejs', function (req, res) {
       });
 });
 
-/**
- * --Temporaly public view
- */
-router.get('/inventory.ejs', function (req, res) {
-  res.render('inventory', {
-    //message: req.flash('loginMessage')
-  });
-});
-
 
 /**
  * --- Private views ---
@@ -38,8 +29,9 @@ router.get('/perfil.ejs', function (req, res) {
     }); 
 });
 
-router.get('/logout', function (req, res) {
-    req.logout();
-    req.redirect();
+router.get('/inventory.ejs', function (req, res) {
+  res.render('inventory', {
+    message: req.flash('ConnectionMessage')
   });
+});
 module.exports = router;
