@@ -34,4 +34,16 @@ router.get('/inventory.ejs', function (req, res) {
     message: req.flash('ConnectionMessage')
   });
 });
+ 
+router.get('/landing.ejs', function(req, res) {
+  res.render('landing', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
+
+router.get('/construccion.ejs', function(req, res) {
+  res.render('construccion', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
 module.exports = router;

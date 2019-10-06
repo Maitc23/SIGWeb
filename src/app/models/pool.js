@@ -4,7 +4,7 @@
 *  
 *credenciales de la base de datos oficial
 *quitar de comentarios para hacerlo funcionar
-**/
+* */
 function mysqlConnection(){
     let mysql = require('mysql'); 
 
@@ -16,19 +16,19 @@ function mysqlConnection(){
         database: 'br3sscnfibc3ctd9uesh' 
     }); 
     return connection;
-}
+}   
 
 
-/**
+/*
  * Credenciales locales para pruebas base de funcionalidad
  * Borrar al terminar o cambiar acceso
- *
+ *          
 function mysqlConnection(){
     let mysql = require('mysql'); 
 
     const connection = mysql.createConnection({
         user: 'root',
-        password: '', 
+        password: 'password', 
         host: 'localhost', 
         port: '3306', 
         database: 'proyecto_sig' 
