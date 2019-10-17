@@ -46,4 +46,9 @@ router.get('/construccion.ejs', function(req, res) {
       /* message: req.flash('loginMessage')*/
   });
 });
+router.get('/insumos.ejs', function(req, res) {
+  res.render('insumos', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
 module.exports = router;
