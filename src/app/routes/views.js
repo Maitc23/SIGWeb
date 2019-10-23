@@ -78,3 +78,5 @@ router.get('/reporte.ejs', function(req, res) {
         /* message: req.flash('loginMessage')*/
     });
 });
+
+module.exports = router;
