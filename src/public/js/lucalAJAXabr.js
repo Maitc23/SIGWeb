@@ -24,7 +24,7 @@ $(document).ready(function () {
         success: function(data) {
           const token = data.token;
           window.localStorage.setItem('token', token);
-          window.location.replace('/perfil.ejs');
+          window.location.replace('/landing.ejs');
         },
         error: function(xhr, status, error) {
           if (xhr && xhr.responseJSON && xhr.responseJSON.error) {
