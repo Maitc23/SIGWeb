@@ -39,10 +39,42 @@ router.get('/landing.ejs', function(req, res) {
       /* message: req.flash('loginMessage')*/
   });
 });
-
-router.get('/construccion.ejs', function(req, res) {
-  res.render('construccion', {
-      /* message: req.flash('loginMessage')*/
-  });
+/** Gabriela Agrego esto porque lo necesita */
+router.get('/insumoexist.ejs', function(req, res) {
+    res.render('insumoexist', {
+        /* message: req.flash('loginMessage')*/
+    });
 });
-module.exports = router;
+
+router.get('/nuevapieza.ejs', function(req, res) {
+    res.render('nuevapieza', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
+router.get('/piezaexist.ejs', function(req, res) {
+    res.render('piezaexist', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
+
+router.get('/insumos.ejs', function(req, res) {
+    res.render('insumos', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
+
+router.get('/pieza.ejs', function(req, res) {
+    res.render('pieza', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
+router.get('/venta.ejs', function(req, res) {
+    res.render('venta', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
+router.get('/reporte.ejs', function(req, res) {
+    res.render('reporte', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
