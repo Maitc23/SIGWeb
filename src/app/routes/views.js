@@ -4,9 +4,6 @@
  */
 const router = require('express').Router();
 
-<<<<<<< HEAD
-router.get('/', function (req, res) {
-=======
 
 /**
  * --- Public Views ---
@@ -15,7 +12,6 @@ router.get('/', function (req, res) {
  */
 
 router.get('/index.ejs', function(req, res) {
->>>>>>> origin/Gabss_dev
     res.render('index', {
         message: req.flash('loginMessage')
     });
@@ -29,8 +25,6 @@ router.get('/login.ejs', function(req, res) {
 });
 
 
-<<<<<<< HEAD
-=======
 router.get('/header.ejs', function(req, res) {
     res.render('header', {
         message: req.flash('loginMessage')
@@ -54,7 +48,6 @@ router.get('/inventory.ejs', function(req, res) {
 });
 
 
->>>>>>> origin/Gabss_dev
 /**
  * --- Private views ---
  */
@@ -65,31 +58,6 @@ router.get('/perfil.ejs', function(req, res) {
     });
 });
 
-<<<<<<< HEAD
-router.get('/inventory.ejs', function (req, res) {
-  res.render('inventory', {
-    message: req.flash('ConnectionMessage')
-  });
-});
- 
-router.get('/landing.ejs', function(req, res) {
-  res.render('landing', {
-      /* message: req.flash('loginMessage')*/
-  });
-});
-
-router.get('/construccion.ejs', function(req, res) {
-  res.render('construccion', {
-      /* message: req.flash('loginMessage')*/
-  });
-});
-router.get('/insumos.ejs', function(req, res) {
-  res.render('insumos', {
-      /* message: req.flash('loginMessage')*/
-  });
-});
-module.exports = router;
-=======
 router.get('/logout', function(req, res) {
     req.logout();
     req.redirect();
@@ -141,4 +109,3 @@ router.get('/reporte.ejs', function(req, res) {
         /* message: req.flash('loginMessage')*/
     });
 });
->>>>>>> origin/Gabss_dev
