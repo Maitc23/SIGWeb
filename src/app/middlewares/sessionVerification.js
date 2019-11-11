@@ -19,6 +19,7 @@ module.exports = (req, res, next) => {
             req.sessionPayload = {
               data: userData
               };
+              console.log(tokenData);
             next();
           })
           .catch(err => res.status(403).send({
