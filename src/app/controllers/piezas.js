@@ -36,7 +36,8 @@ module.exports= {
     piezaExistente: async (req,res,next) => {
         if(req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario){
             try {
-                inv = await piezasServices.piezaExistente();
+                inv = await piezasServices.piezaExistente(req.sessionPayload.data.id_usuario);
+                // console.log(inv);
                 res.status(200).send({
                     data:inv
                 })

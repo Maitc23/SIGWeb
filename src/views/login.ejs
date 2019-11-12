@@ -27,8 +27,8 @@
             <div>
                 <div class="card" style="width: 20rem">
                     <img src="imagenes/Artesanias (1).jpg" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #D8A10A">
-                        <form>
+                    <div class="card-body" style="background-color: rgb(226, 226, 226)">
+                        <form action="/login" method="post">
                             <div class="form-group">
                                 <strong><label for="exampleInputEmail1">E-mail:</label></strong>
                                 <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Enter email">
@@ -41,11 +41,11 @@
 
                             </div>
                             <div class="text-center mt-3">
-                                <button type="submit" class="btn boton" id="btn-login"><strong>Iniciar sesión</strong></button>
+                                <button type="button" class="btn boton" id="btn-login" value="logc in">Iniciar sesión</button>
                             </div>
                         </form>
                         <div class="text-center mt-2">
-                            <button type="submit" class="btn boton disabledd"><strong><a>Registrate</a></strong></button>
+                            <a href="registrarUsuario.ejs"><button type="submit" class="btn boton disabledd"><strong>Registrate</strong></button></a>
                         </div>
                     </div>
                 </div>
@@ -59,11 +59,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/lucalAJAXabr.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        $(function() {
-            $('#main_navbar').bootnavbar();
-        })
-    </script>
+
 </body>
 
 </html>

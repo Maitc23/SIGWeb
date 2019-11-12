@@ -22,13 +22,15 @@ nuevaPieza: (nombre, precio, cantidad) => new Promise(
 * @params: 
 * @returns {Promise<any>}
  */
-consultaPieza:() => new Promise(
+piezaExistente:(correo) => new Promise(
     (resolve, reject) => {
-        mysqlConn.query('SELECT c.id_categoria,p.id_categoria,c.nombre,p.nombre, p.precio, p.cantidad from Categoria c INNER JOIN Pieza p ON c.id_categoria = p.id_categoria',
+        mysqlConn.query('SELECT c.id_categoria"id_categoria", p.id_categoria"id_pieza", c.nombre"categoria", p.nombre, p.precio, p.cantidad from((Categoria c INNER JOIN Pieza p ON c.id_categoria = p.id_categoria) INNER JOIN Usuario u ON p.id_usuario = u.id_usuario) where p.id_categoria = ?',
+        [correo],
         (err, rows, fields) => {
         if(err) return reject(err);
             if(Array.isArray (rows)&& rows.length >0){
-                return resolve(rows[0]);
+                console.log(rows);
+              return resolve(rows);
             }
             else{
                 return reject({
