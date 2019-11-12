@@ -10,36 +10,34 @@ module.exports= {
     @returns {Promise<void>} */
 
     nuevaPieza: async(req,res,next) => {
-        console.log("   WWWWWWWWW");
-        // if (req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario){
-        //     try{
-        //         piezas = await piezasServices.nuevaPieza(req.body.nombre,req.body.precio,req.body.cantidad);
-        //         res.statud(200).send({
-        //             data:piezas
-        //         })
-        //     }
-        //     catch(err){
-        //         res.status(err.status ? err.status : 500).send({
-        //             error:err.message
-        //         });
-        //     }
-        // }
-        // else{
-        //     res.status(403).send({
-        //         error: 'INVALID_AUTHENTICATION'
-        //     });
-        // }
+        if (req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario){
+            try{
+                piezas = await piezasServices.nuevaPieza(req.body.nombre,req.body.precio,req.body.cantidad);
+                res.statud(200).send({
+                    data:piezas
+                })
+            }
+            catch(err){
+                res.status(err.status ? err.status : 500).send({
+                    error:err.message
+                });
+            }
+        }
+        else{
+            res.status(403).send({
+                error: 'INVALID_AUTHENTICATION'
+            });
+        }
     },
      /**
     Obtine las piezas existentes
     @params: nombre, precio, cantidad
     @returns {Promise<void>} */
     piezaExistente: async (req,res,next) => {
-        console.log(req);
-        // se cambio la condicion req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario
         if(req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario){
             try {
                 inv = await piezasServices.piezaExistente();
+                console.log(inv);
                 res.status(200).send({
                     data:inv
                 })

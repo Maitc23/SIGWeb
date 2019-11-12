@@ -15,7 +15,7 @@ function mysqlConnection(){
         port: '3306', 
         database: 'br3sscnfibc3ctd9uesh' 
     }); 
-        return connection;
+    return connection;
 }   
 
 
