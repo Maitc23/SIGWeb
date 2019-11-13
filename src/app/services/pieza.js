@@ -22,10 +22,10 @@ nuevaPieza: (nombre, precio, cantidad) => new Promise(
 * @params: 
 * @returns {Promise<any>}
  */
-piezaExistente:(correo) => new Promise(
+piezaExistente:(id) => new Promise(
     (resolve, reject) => {
         mysqlConn.query('SELECT c.id_categoria"id_categoria", p.id_categoria"id_pieza", c.nombre"categoria", p.nombre, p.precio, p.cantidad from((Categoria c INNER JOIN Pieza p ON c.id_categoria = p.id_categoria) INNER JOIN Usuario u ON p.id_usuario = u.id_usuario) where p.id_categoria = ?',
-        [correo],
+        [id],
         (err, rows, fields) => {
         if(err) return reject(err);
             if(Array.isArray (rows)&& rows.length >0){
@@ -39,7 +39,7 @@ piezaExistente:(correo) => new Promise(
                   });
             }
         }
-    )
-}
+    )}
 )
+
 }
