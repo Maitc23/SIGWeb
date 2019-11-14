@@ -1,77 +1,84 @@
-<% include partial/header.ejs %>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <img src="imagenes/sombrero.PNG" class="img-fluid mt-5">
-            </div>
-            <div class="col-md-7 form-group mt-5">
-                <h1 style="color: #d8a10a">INSUMOS</h1>
-                <h5 style="color: #93949B"><em>Nuevo producto</em></h5>
-                <form action="" method="POST" class="mt-5">
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Categoria:</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="" name="" type="text" placeholder="categoria" required>
+<tlink href="css/estilos.css" rel="sylesheet">
+    <% include partial/header.ejs %>
+
+        <div class="container" style=" margin-top: 3%;">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="imagenes/sombrero.PNG" class="img-fluid mt-5">
+                </div>
+                <div class="col-md-7 form-group mt-5">
+                    <h3 style="color: #d8a10a" style="margin-top:3%;">INSUMOS</h3>
+                    <h5 style="color: #93949B"><em>Nuevo producto</em></h5>
+                    <form action="" method="POST" class="mt-5">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Categoria:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="" name="" type="text" placeholder="categoria" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Nombre:</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="" name="" type="text" placeholder="nombre del insumo"required>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Nombre:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="" name="" type="text" placeholder="nombre del insumo" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Sub-Categoria:</label>
                             <div class="col-sm-10">
                                 <input class="form-control" id="" name="" type="text" placeholder="Sub-Categoria">
                             </div>
                         </div>
-                    <fieldset class="form-group">
-                        <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                        <div class="col-sm-10">
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
                                 First radio
                             </label>
-                            </div>
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
                                 Second radio
                             </label>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                            <label class="form-check-label" for="gridRadios3">
-                                Third disabled radio
-                            </label>
+                        </fieldset>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Precio:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" name="" id="" placeholder="precio 1.50$" required>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Cantidad:</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" name="" id="" placeholder="cantidad 15 und." required>
+                            </div>
                         </div>
-                    </fieldset>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Precio:</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" type="text" name="" id="" placeholder="precio 1.50$" required>
+                        <div class="form-group row">
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn-get-started2" style="background-color:white;">Guardar</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Cantidad:</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" type="text" name="" id="" placeholder="cantidad 15 und." required>   
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-12 text-center">
-                        <button type="submit" class="btn boton">Guardar</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>   
-    </div>
+        </div>
+
+        <!--================Scripts============================= -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/perfilx.js"></script>
+        </body>
 
     <!--================Scripts============================= -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

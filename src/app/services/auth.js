@@ -81,14 +81,12 @@ module.exports = {
 
   /**
    * Generate JWT Token
-   * @param isUser
    * @param id
    * @returns {*}
    */
-  generateToken: (isUser, id) => jwt.sign(
+  generateToken: (id) => jwt.sign(
     {
-      type: isUser,
-      id: id
+       id: id
     },
     privateKey,
     defaultJwtConfig

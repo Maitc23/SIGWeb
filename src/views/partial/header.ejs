@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-    <link href="/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="/css/estilos.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="bootstrap/bootnavbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>Artis</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="css/estilom.css" rel="stylesheet">
+
 </head>
+
 <body>
 
           <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
@@ -43,40 +59,57 @@
                           <div class="dropdown-divider"></div>
                           <li><a class="dropdown-item" href="#">Insumo existente</a></li>
                         </ul>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                              <strong>Piezas</strong>
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Nueva pieza</a></li>
-                              <li><a class="dropdown-item" href="#">Pieza existente</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                              <strong>Inventario</strong>
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Insumos</a></li>
-                              <li><a class="dropdown-item" href="#">Piezas</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#"><strong>Ventas</strong></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#" ><strong>Reportes</strong></a>
-                      </li>
+                        <li class="menu-has-children"><a href="#">Piezas</a>
+                            <ul>
+                                <li><a href="nuevapieza.ejs">Nueva Pieza</a></li>
+                                <li><a href="piezaexist.ejs">Pieza Existente</a>
 
-                      <li class="nav-item">
-                        <a class="nav-link"  href="#" ><strong>Cerrar Sesión</strong></a>
-                      </li>
-                      <li class="nav-item mt-2">
-                        <i class='fa fa-user' style='font-size:25px;color: #d8a10a'></i>
-                      </li>
-                  </ul>
-              </div>
-          </nav>
+                                </li>
+                            </ul>
+                            <li class="menu-has-children"><a href="#">Inventario</a>
+                                <ul>
+                                    <li><a href="insumos.ejs">Insumos</a></li>
+                                    <li><a href="pieza.ejs">Piezas</a>
+
+                                    </li>
+                                </ul>
+                                <li><a href="venta.ejs">Ventas</a></li>
+                                <li><a href="reporte.ejs">Reportes</a></li>
+
+                            </li>
+                            <li><a href="#">Cerrar Sesion</a></li>
+                            <li class="nav-item mt-2">
+                                <i class='fa fa-user' style='font-size:25px;color: #d8a10a'></i>
+                            </li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+    <!-- #header -->
+
+
+
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

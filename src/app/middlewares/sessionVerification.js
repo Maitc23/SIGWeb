@@ -13,18 +13,22 @@ module.exports = (req, res, next) => {
     const tokenString = token[1];
     if (verifyToken(tokenString)) {
       const tokenData = decodeToken(tokenString);
-      const type = tokenData && tokenData.payload && tokenData.payload.type;
+      if (tokenData.payload.id){
         getUserById(tokenData.payload.id, tokenString)
           .then(userData => {
             req.sessionPayload = {
-              data: userData,
-              type,
-            };
+              data: userData
+              };
             next();
           })
           .catch(err => res.status(403).send({
             error: 'PROHIBITED'
           }));
+        } else { 
+          res.status(403).send({
+            error: 'PROHIBITED'
+          });
+        }
     } else {
       res.status(401).send({
         error: 'UNAUTHORIZED'
