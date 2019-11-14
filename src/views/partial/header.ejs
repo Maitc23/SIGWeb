@@ -30,34 +30,35 @@
 
 <body>
 
-          <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
-              <a class="navbar-brand" href="#"><img src="imagenes/logo (1).png" width="50%"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-      
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-lg-auto">
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                            <strong>Insumos</strong>
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li class="nav-item dropdown">
-                                  <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                                      aria-haspopup="true" aria-expanded="false">
-                                      Nuevo insumo
-                                  </a>
-                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                      <li><a class="dropdown-item" href="#">Unidad </a></li>
-                                      <li><a class="dropdown-item" href="#">Subcategoria</a></li>
-                                      <li></li><a class="dropdown-item" href="#">Medidas</a></li>                       
-                                  </ul>
-                                </li>
-                          <div class="dropdown-divider"></div>
-                          <li><a class="dropdown-item" href="#">Insumo existente</a></li>
+    <!--==========================
+  Header
+  ============================-->
+    <header id="header">
+        <div class="container">
+
+            <div id="logo" class="pull-left">
+                <a href="landing.ejs"><img src="imagenes/logo (1).png" alt="" title="" style="height: 40px;" /></img>
+                </a>
+                <!-- Uncomment below if you prefer to use a text logo -->
+                <!--<h1><a href="#hero">Regna</a></h1>-->
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <!--menu-active-->
+
+                    <li class=""><a href="#">Insumos</a>
+                        <ul>
+                            <li><a href="insumoexist.ejs">Insumo Existente</a>
+
+                            </li>
+                            <li><a href="inventory.ejs">Nuevo Insumo</a>
+                                <ul>
+                                    <li><a href="inventory.ejs">Nuevo Insumo</a></li>
+                                    <li><a href="inventory.ejs">Nuevo Insumo</a></li>
+                                </ul>
+                            </li>
+
                         </ul>
                         <li class="menu-has-children"><a href="#">Piezas</a>
                             <ul>
