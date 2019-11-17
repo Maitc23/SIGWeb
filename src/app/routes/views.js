@@ -63,6 +63,7 @@ router.get('/insumos.ejs', function(req, res) {
     });
 });
 
+
 router.get('/pieza.ejs', function(req, res) {
     res.render('pieza', {
         /* message: req.flash('loginMessage')*/
@@ -73,10 +74,18 @@ router.get('/venta.ejs', function(req, res) {
         /* message: req.flash('loginMessage')*/
     });
 });
-router.get('/reporte.ejs', function(req, res) {
-    res.render('reporte', {
-        /* message: req.flash('loginMessage')*/
-    });
+
+
+router.get('/reportes.ejs', function(req, res) {
+  res.render('reportes', {
+      /* message: req.flash('loginMessage')*/
+  });
 });
 
+router.get('/index.ejs', function(req, res) {
+  res.render('index', {
+      /* message: req.flash('loginMessage')*/
+  });
+});
 module.exports = router;
+
