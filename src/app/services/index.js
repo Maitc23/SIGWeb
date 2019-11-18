@@ -1,8 +1,10 @@
 const authService = require('./auth');
 const inventoryServices = require('./inventory');
 const piezasServices = require('./pieza.js');
+const categoriaServices = require('./categoria.js');
 module.exports = {
     auth: authService,
     inventory:inventoryServices,
-    pieza:piezasServices
+    pieza:piezasServices,
+    categoria:categoriaServices
 };

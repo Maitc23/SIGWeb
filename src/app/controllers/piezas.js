@@ -9,21 +9,20 @@ module.exports= {
 	@params: nombre, precio, cantidad
 	@returns {Promise<void>} */
 
+
 	nuevaPieza: async(req,res,next) => {
-		if (req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario){
-			try{
-				piezas = await piezasServices.nuevaPieza(req.body.nombre,req.body.precio,req.body.cantidad);
-				res.statud(200).send({
-					data:piezas
+		if (req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario) {
+			try {
+				inv = await piezasServices.nuevaPieza(req.body.categoria, req.body.nombre, req.body.costo, req.body.cantidad, req.sessionPayload.data.id_usuario, req.body.imagen);
+				res.status(200).send({
+					data: inv
 				})
-			}
-			catch(err){
+			} catch (err) {
 				res.status(err.status ? err.status : 500).send({
-					error:err.message
+					error: err.message
 				});
 			}
-		}
-		else{
+		} else {
 			res.status(403).send({
 				error: 'INVALID_AUTHENTICATION'
 			});
@@ -37,7 +36,6 @@ module.exports= {
 		if(req && req.sessionPayload && req.sessionPayload.data && req.sessionPayload.data.id_usuario){
 			try {
 				inv = await piezasServices.piezaExistente(req.sessionPayload.data.id_usuario);
-				// console.log(inv);
 				res.status(200).send({
 					data:inv
 				})
@@ -51,5 +49,6 @@ module.exports= {
 				error:'INVALID_AUTHENTICATION'
 			});
 		}
-	}
+	},
+	
 }

@@ -6,10 +6,10 @@ module.exports={
 * @params: nombre, precio, cantidad
 * @returns {Promise<any>}
  */
-nuevaPieza: (nombre, precio, cantidad) => new Promise(
+nuevaPieza: (categoria,nombre, precio, cantidad,id,imagen) => new Promise(
         (resolve, reject) => {
-            mysqlConn.query('Call NewPieza (?,?,?)',
-            [nombre, precio, cantidad],
+            mysqlConn.query('INSERT INTO Pieza (nombre,imagen,precio,cantidad,id_usuario,id_categoria) VALUES (?,?,?,?,?,?)',
+            [nombre,imagen, precio, cantidad,id,categoria],
             (err, rows, fields) => {
             if(err) return reject(err);
                 resolve();
@@ -24,12 +24,11 @@ nuevaPieza: (nombre, precio, cantidad) => new Promise(
  */
 piezaExistente:(id) => new Promise(
     (resolve, reject) => {
-        mysqlConn.query('SELECT c.id_categoria"id_categoria", p.id_categoria"id_pieza", c.nombre"categoria", p.nombre, p.precio, p.cantidad from((Categoria c INNER JOIN Pieza p ON c.id_categoria = p.id_categoria) INNER JOIN Usuario u ON p.id_usuario = u.id_usuario) where p.id_categoria = ?',
+        mysqlConn.query('SELECT c.id_categoria"id_categoria", p.id_pieza"id_pieza", c.nombre"categoria", p.nombre, p.precio, p.cantidad from((Categoria c INNER JOIN Pieza p ON c.id_categoria = p.id_categoria) INNER JOIN Usuario u ON p.id_usuario = u.id_usuario) where p.id_usuario = ?',
         [id],
         (err, rows, fields) => {
         if(err) return reject(err);
             if(Array.isArray (rows)&& rows.length >0){
-                console.log(rows);
               return resolve(rows);
             }
             else{
@@ -40,6 +39,7 @@ piezaExistente:(id) => new Promise(
             }
         }
     )}
-)
+    ),
+    
 
 }
