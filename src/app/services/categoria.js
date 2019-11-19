@@ -7,7 +7,7 @@ module.exports = {
                     'INSERT INTO Categoria (nombre, id_usuario) VALUES (?,?)',
                     [categoria,id],
                 (err, rows, fields) => {
-                    if (err) return reject(err);
+                    if (err) return reject(err);    
                     resolve();
                 }
             )
@@ -26,7 +26,7 @@ module.exports = {
                     else {
                         return reject({
                             status: 404,
-                            message: 'USER_NOT_FOUND'
+                            message: 'No existen categorias registradas'
                         });
                     }
                 }

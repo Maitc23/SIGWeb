@@ -27,6 +27,7 @@ $(document).ready(function (){
                 dataType: 'json',
                 success: function(data) {
                     alert("Se ingreso el insumo corrrectamente");
+                    
                 },
                 error: function(xhr, status, error) {
                     if(xhr && xhr.responseJSON && xhr.responseJSON.error){

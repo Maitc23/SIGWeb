@@ -31,7 +31,7 @@ module.exports = {
                     else {
                         return reject({
                             status: 404,
-                            message: 'USER_NOT_FOUND'
+                            message: 'No hay insumos registrados'
                         });
                     }
                 }
