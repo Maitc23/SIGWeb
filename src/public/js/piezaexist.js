@@ -40,12 +40,13 @@ function generarTablaInsumosExistentesCategoria(categoria,id,x) {
                 '</div>\n'+
                 '<div id="collapse'+id+'" class="collapse" aria-labelledby="heading'+id+'" data-parent="#accordion">\n'+
                 '<div class="card-body" id="contenido">\n'+
-                '<table class="tabla" id="tabla'+id+'">\n'+
+                '<table class="table" id="tabla'+id+'">\n'+
                 '<tr>\n'+
                     '<th> Nombre </th>\n'+
                     '<th> Precio </th>\n'+
                     '<th> Cantidad </th>\n'+
                 '</tr>\n'+
+                '</table>' +
                 '</div>\n'+
                 '</div>\n'+
                 '</div>\n'

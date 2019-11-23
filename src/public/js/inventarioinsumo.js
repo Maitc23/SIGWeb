@@ -27,13 +27,27 @@ window.onload = function () {
     });
 }
 
-function generarTablaInsumosExistentesCategoria() {
-    return '<table class="tabla" id="tabla">\n' +
+function generarTablaInsumosExistentesCategoria(id) {
+    return '<div class="card" id="card">\n'+
+    '<div class="card-header" id="heading'+id+'">\n'+
+    '<h5 class="mb-0 ">\n'+
+    '<button class="btn btn-link text-uppercase" data-toggle="collapse" data-target="#collapse'+id+'" aria-expanded="true" aria-controls="collapse'+id+'" id="amarelo">\n'+
+    'CATEGORIA' +
+    '</button>\n' +
+    '</h5>\n' +
+    '</div>\n' +
+    '<div id="collapse'+id+'" class="collapse" aria-labelledby="heading'+id+'" data-parent="#accordion">\n'+
+    '<div class="card-body" id="contenido">\n' +
+    '<table class="table" id="tabla">\n' +
         '<tr>\n' +
         '<th> Nombre </th>\n' +
         '<th> Precio </th>\n' +
         '<th> Cantidad </th>\n' +
-        '</tr>\n'
+        '</tr>\n'+
+    '</table>' +
+    '</div>\n' +
+    '</div>\n' +
+    '</div>\n'
 }
 
 function genererarTablaInsumoExistenteContenido(nombre, precio, cantidad) {
