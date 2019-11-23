@@ -18,9 +18,9 @@
                     <img src="imagenes/sombrero.PNG" class="img-fluid mt-5">
                 </div>
                 <div class="col-md-7 form-group mt-5">
-                    <h3 style="color: #d8a10a" style="margin-top:3%;">Inventarios</h3>
-                    <h5 style="color: #93949B"><em>Insumo</em></h5>
-                    <div id="accordion">
+                    <h3 style="color: #d8a10a" style="margin-top:3%;">Generador de Venta</h3>
+                    <h5 style="color: #93949B"><em>Venta</em></h5>
+                    <!--<div id="accordion">
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
@@ -32,7 +32,7 @@
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
-                                    TABLA DE INFORMACION SOBRE EL INSUMO O MODIFICACIONES
+                                    
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                 <div class="card-body">
-                                    <!--INFORMACIOOOOOOOOOOOOON-->
+                                    INFORMACIOOOOOOOOOOOOON
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                 <div class="card-body">
-                                    <!--INFORMACIOOOOOOOOOOOOON-->
+                                    INFORMACIOOOOOOOOOOOOON
                                 </div>
                             </div>
 
@@ -68,65 +68,104 @@
                         </div>
 
 
-                    </div>
+                    </div>-->
+                    
+                 
+                    
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Precio Final:</label>
+                        <label class="col-sm-2 col-form-label">Pieza</label>
                         <div class="col-sm-10">
+                            <select data-live-search="true"  id="piezasExistentes" >
 
+                            </select><br>
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Pieza:</label>
+                        <label class="col-sm-2 col-form-label">Cantidad:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input type="number" id="cantidadPiezas" value="1" min="1">
                         </div>
-                    </div>
+                    </div>                    
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Envio:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input id="costoEnvio" name="" type="number" onchange="precioTotal()" value="0" min="0" step="0.01" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Extra:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input id="extra" name="" type="number" onchange="precioTotal()" value="0" min="0" step="0.01">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Descuento:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input id="descuento" name="" type="number" onchange="precioTotal()" value="0" min="0" step="0.01">
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Precio Final:</label>
+                        <div class="col-sm-10">
+                            <span id="precioFinal"></span>
+                        </div>
+                    </div>
+
                     <h6>Opciones de pagos</h6>
-                    <input type="radio" name="" value=""> Credito<input type="radio" name="" value=""> Debito
+                    <input type="radio" name="tipo" value="1"> Credito<input type="radio" name="tipo" value="0" checked> Debito
                     <h6>Datos del Cliente</h6>
+                    <div class="box" style="display:none">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" >Cuotas:</label>
+                            <div class="col-sm-10">
+                                <input name="" type="number" id="cuotas" min="0" value="0">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Cliente:</label>
+                        <label class="col-sm-2 col-form-label" >Cliente:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input name="" type="text" id="cliente" value="" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Celular:</label>
+                        <label class="col-sm-2 col-form-label" >Celular:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input  name="" type="text" id="celular" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Email:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input  name="" type="text" id="email"  required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Direccion:</label>
                         <div class="col-sm-10">
-                            <input id="" name="" type="text" required>
+                            <input id="direccion" name="" type="text"  id="direccion" required>
                         </div>
                     </div>
-
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Provincia:</label>
+                        <div class="col-sm-10">
+                            <input  name="" type="text"  id="provincia" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Distrito:</label>
+                        <div class="col-sm-10">
+                            <input  name="" type="text"  id="distrito" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 text-center">
+                            <button type="submit" class="btn-get-started2" id="realizar-venta" style="background-color:white;">Guardar</button>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -144,3 +183,9 @@
 
             </div>
         </div>
+        <div>
+            
+        </div>
+<script src="js/venta.js"></script>
+    </body>
+</html>
