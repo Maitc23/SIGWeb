@@ -27,12 +27,12 @@ window.onload = function () {
     });
 }
 
-function generarTablaInsumosExistentesCategoria(id) {
-    return '<div class="card" id="card">\n'+
-    '<div class="card-header" id="heading'+id+'">\n'+
+function generarTablaInsumosExistentesCategoria(categoria,id) {
+    return '<div class="card" id="card">\n' +
+    '<div class="card-header" id="heading'+id+'">\n' +
     '<h5 class="mb-0 ">\n'+
     '<button class="btn btn-link text-uppercase" data-toggle="collapse" data-target="#collapse'+id+'" aria-expanded="true" aria-controls="collapse'+id+'" id="amarelo">\n'+
-    'CATEGORIA' +
+    'CATEGORIA'  +
     '</button>\n' +
     '</h5>\n' +
     '</div>\n' +
