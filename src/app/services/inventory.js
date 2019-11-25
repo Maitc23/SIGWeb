@@ -26,13 +26,12 @@ module.exports = {
                 (err, rows, fields) => {
                     if (err) return reject(err);
                     if (Array.isArray(rows) && rows.length > 0) {
-                        console.log(rows);
                         return resolve(rows);
                     }
                     else {
                         return reject({
                             status: 404,
-                            message: 'USER_NOT_FOUND'
+                            message: 'No hay insumos registrados'
                         });
                     }
                 }
@@ -42,12 +41,11 @@ module.exports = {
 
     inventarioInsumo: (id) => new Promise(
         (resolve, reject) => {
-            mysqlConn.query('SELECT nombre,precio,cantidad FROM Insumo WHERE id_usuario = ?',
+            mysqlConn.query('SELECT id_insumo,nombre,precio,cantidad FROM Insumo WHERE id_usuario = ?',
                 [id],
                 (err, rows, fields) => {
                     if (err) return reject(err);
                     if (Array.isArray(rows) && rows.length > 0) {
-                        console.log(rows);
                         return resolve(rows);
                     }
                     else {
