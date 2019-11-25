@@ -147,3 +147,7 @@ input[type=text] {
     color: rgba(255, 197, 7, 0.63);
     font-weight: bold;
 }
+
+.thead-amarillo th{
+  color:white;background-color:#d8a10a;border-color: white;
+}

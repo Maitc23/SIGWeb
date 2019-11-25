@@ -28,18 +28,22 @@ window.onload = function () {
 }
 
 function generarTablaInsumosExistentesCategoria() {
-    return '<table class="tabla" id="tabla">\n' +
-        '<tr>\n' +
-        '<th> Nombre </th>\n' +
-        '<th> Precio </th>\n' +
-        '<th> Cantidad </th>\n' +
-        '</tr>\n'
+    return '<table class="tabla table table-hover" id="tabla">\n' +
+        '<thead class="thead-amarillo">\n' +
+        '<tr>\n'+
+            '<th> Nombre </th>\n' +
+            '<th> Precio </th>\n' +
+            '<th> Cantidad </th>\n' +
+        '</tr>\n'+
+        '</thead>\n'
 }
 
 function genererarTablaInsumoExistenteContenido(nombre, precio, cantidad) {
-    return '<tr>\n' +
-        '<td>' + nombre + '</td>\n' +
-        '<td>' + precio + '</td>\n' +
-        '<td>' + cantidad + '</td>\n' +
-        '</tr>\n'
+    return  '<tbody>\n'+
+            '<tr>\n' +
+                '<td>' + nombre + '</td>\n' +
+                '<td>' + precio + '</td>\n' +
+                '<td>' + cantidad + '</td>\n' +
+            '</tr>\n'+
+            '</tbody>'
 }
