@@ -18,9 +18,11 @@ window.onload = function () {
         },
         error: function (xhr, status, error) {
             if (xhr && xhr.responseJSON && xhr.responseJSON.error) {
-                alert(xhr.responseJSON.error);
+                //alert(xhr.responseJSON.error);
+                alert("Debe iniciar sesión primero.");
+                window.location.href = '/';
             } else {
-                alert(error);
+                //alert(error);
             }
         }
 
