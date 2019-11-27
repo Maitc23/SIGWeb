@@ -1,4 +1,4 @@
-window.onload = function () {
+ $(document).ready(function (){
     $.ajax({
         type: 'get',
         url: '/inventarioPieza',
@@ -20,14 +20,13 @@ window.onload = function () {
             if (xhr && xhr.responseJSON && xhr.responseJSON.error) {
                 //alert(xhr.responseJSON.error);
                 alert("Debe iniciar sesión primero.");
-                window.location.href = '/';
-            } else {
+               } else {
                 alert(error);
             }
         }
 
     });
-}
+});
 
 function generarTablaInsumosExistentesCategoria() {
         return '<table class="tabla table table-hover" id="tabla">\n' +

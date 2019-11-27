@@ -1,4 +1,4 @@
-window.onload = function () {
+
     $.ajax({
         type: 'get',
         url: '/nuevapieza',
@@ -20,4 +20,3 @@ window.onload = function () {
         }
 
     });
-}
