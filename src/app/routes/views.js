@@ -79,5 +79,10 @@ router.get('/reporte.ejs', function(req, res) {
     });
 });
 
+router.get('/construccion.ejs', function(req, res) {
+    res.render('construccion', {
+        /* message: req.flash('loginMessage')*/
+    });
+});
 
 module.exports = router;
