@@ -143,7 +143,32 @@ input[type=text] {
     border: 1px solid rgba(255, 197, 7, 0.63);
 }
 
+input[type=number] {
+  border-radius: 15px;
+  border-color: rgba(255, 197, 7, 0.63);
+  border: 1px solid rgba(255, 197, 7, 0.63);
+}
+
 #amarelo {
     color: rgba(255, 197, 7, 0.63);
     font-weight: bold;
+}
+
+#categoria {
+  border-radius: 15px;
+  border-color: rgba(255, 197, 7, 0.63);
+  border: 1px solid rgba(255, 197, 7, 0.63);
+}
+
+#catselect {
+  border-radius: 15px;
+  border-color: rgba(255, 197, 7, 0.63);
+  border: 1px solid rgba(255, 197, 7, 0.63);
+}
+
+
+#piezasExistentes {
+  border-radius: 15px;
+  border-color: rgba(255, 197, 7, 0.63);
+  border: 1px solid rgba(255, 197, 7, 0.63);
 }
